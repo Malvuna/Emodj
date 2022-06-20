@@ -1,5 +1,3 @@
-
-
 let data = [
   {
     title: "100",
