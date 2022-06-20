@@ -1,4 +1,4 @@
-import {data} from "./emoji";
+import {data} from "./emoji.js";
 
 let main = document.querySelector("main");
 main.className = "main";
