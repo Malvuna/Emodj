@@ -36,10 +36,13 @@ dataUniq.forEach((elem) => {
 let listElem = document.querySelectorAll(".divCard");
 
 function inputInput() {
-
   let value = input.value.trim().toLowerCase();
 
-  let filterEmoji = dataUniq.filter((elem) => (elem.title.toLowerCase().includes(value) || elem.keywords.toLowerCase().includes(value)));
+  let filterEmoji = dataUniq.filter(
+    (elem) =>
+      elem.title.toLowerCase().includes(value) ||
+      elem.keywords.toLowerCase().includes(value),
+  );
   console.log(filterEmoji);
 
   main.innerHTML = "";
