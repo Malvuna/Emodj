@@ -1,5 +1,10 @@
-import data from "./emoji.js";
-const dataUniq = changeUniqKeywords();
+// import data from "./emoji.js";
+
+(async function() {
+  const res = await fetch('https://emoji.ymatuhin.workers.dev')
+  const data = await res.json()
+
+  const dataUniq = changeUniqKeywords();
 
 let main = document.querySelector("main");
 main.className = "main";
@@ -14,7 +19,7 @@ function createElem(symbol, title, keywords) {
   img.textContent = symbol;
   img.className = "divCard__img";
 
-  let nameCard = document.createElement("div");
+  let nameCard = document.createElement("div"); 
   nameCard.textContent = title;
   nameCard.className = "divCard__titel";
 
@@ -63,6 +68,7 @@ function changeUniqKeywords() {
   });
 }
 
+})()
 // console.log(data);
 
 // for (let i = 0; i < 1; i++) {
